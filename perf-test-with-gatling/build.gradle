@@ -5,11 +5,11 @@ repositories {
 }
 
 group 'com.xyzz.gsdd'
-version '1.0-SNAPSHOT'
+version '1.1-SNAPSHOT'
 dependencies {
-    compile 'org.scala-lang:scala-library:2.12.4'
-    compile 'io.gatling:gatling-app:2.3.0'
-    compile 'io.gatling.highcharts:gatling-charts-highcharts:2.3.0'
+    compile 'org.scala-lang:scala-library:2.12.8'
+    compile 'io.gatling:gatling-app:3.0.3'
+    compile 'io.gatling.highcharts:gatling-charts-highcharts:3.0.3'
 }
 
 task loadTest(type: JavaExec) {

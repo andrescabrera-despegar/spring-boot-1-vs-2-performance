@@ -1,6 +1,8 @@
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 
+import scala.concurrent.duration._
+
 class BootLoadSimulation extends Simulation {
 
   private val baseUrl = "http://localhost:8080"
@@ -11,7 +13,7 @@ class BootLoadSimulation extends Simulation {
   private val simUsers = System.getProperty("SIM_USERS", "1").toInt
 
   private val httpConf = http
-    .baseURL(baseUrl)
+    .baseUrl(baseUrl)
     .acceptHeader("application/json;charset=UTF-8")
 
   private val addPersonTest = repeat(requestCount) {
